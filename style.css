@@ -1,0 +1,102 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --size-paragraphs: 16px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--Light-pink);
+}
+
+h1,
+h2,
+p {
+    font-size: var(--size-paragraphs);
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+    color: var(--Dark-purple);
+}
+
+.container h1 {
+    font-size: 3rem;
+    margin: 0 0;
+}
+
+.accordion-content p {
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0 0 20px 0;
+}
+
+
+
+/* CONTAINER */
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+/* ACCORDION */
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.accordion-header:hover {
+    cursor: pointer;
+}
+
+.accordion > .accordion-item {
+    border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 300px;
+}
+
+/* ICONS */
+
+.plus {
+    display: block;
+}
+
+.minus {
+    display: none;
+}
+
+.accordion-item.active .minus {
+    display: block;
+}
+
+.accordion-item.active .plus {
+    display: none;
+}
